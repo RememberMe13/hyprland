@@ -3,7 +3,7 @@ username="$1"
 
 # Clone the repo
 echo "Cloning the EOS Community Sway repo..."
-git clone https://github.com/EndeavourOS-Community-Editions/sway.git
+git clone https://github.com/RememberMe13/hyprland.git
 
 # Check if nvidia-inst is installed
 # If it is, do the Nvidia stuff
@@ -29,12 +29,12 @@ fi
 
 # Install the custom package list
 echo "Installing needed packages..."
-pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< ./sway/packages-repository.txt)
+pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< ./hyprland/packages-repository.txt)
 
 # Deploy user configs
 echo "Deploying user configs..."
-rsync -a sway/.config "/home/${username}/"
-rsync -a sway/home_config/ "/home/${username}/"
+rsync -a hyprland/.config "/home/${username}/"
+rsync -a hyprland/home_config/ "/home/${username}/"
 
 # Add "NoDisplay" property to desktop files we don't want in the launcher
 echo "Adding custom local desktop files..."
@@ -117,7 +117,7 @@ fi
 
 # Remove the repo
 echo "Removing the EOS Community Sway repo..."
-rm -rf sway
+#rm -rf sway
 
 # Enable the Greetd service
 echo "Enabling the Greetd service..."
