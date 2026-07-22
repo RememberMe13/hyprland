@@ -84,17 +84,13 @@ done
 # Restore user ownership
 chown -R "${username}:${username}" "/home/${username}"
 
+
+#TODO change greetd to a systemd autologin
 # If autologin has been configured, update greetd.conf accordingly
 if getent group autologin | grep -qw "${username}"; then
-    echo "autologin group detected, configuring autologin in greetd.conf..."
+    echo "autologin group detected, configuring autologin in idk systemd or something..."
 
     sway_command="start-hyprland"
-
-    # Add --unsupported-gpu when nvidia-inst is installed
-    if pacman -Qq | grep -Eq '^nvidia(|-dkms|-open|-open-dkms)$'; then
-        echo "nvidia-inst detected, enabling --unsupported-gpu..."
-        sway_command="sway --unsupported-gpu"
-    fi
 
     cat <<EOF >> sway/etc/greetd/greetd.conf
 
@@ -120,7 +116,7 @@ echo "Removing the repo..."
 #rm -rf sway
 
 # Enable the Greetd service
-echo "Enabling the Greetd service..."
-systemctl enable greetd.service
+#echo "Enabling the Greetd service..."
+#systemctl enable greetd.service
 
 echo "Installation complete."
