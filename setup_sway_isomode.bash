@@ -88,7 +88,7 @@ chown -R "${username}:${username}" "/home/${username}"
 if getent group autologin | grep -qw "${username}"; then
     echo "autologin group detected, configuring autologin in greetd.conf..."
 
-    sway_command="sway"
+    sway_command="start-hyprland"
 
     # Add --unsupported-gpu when nvidia-inst is installed
     if pacman -Qq | grep -Eq '^nvidia(|-dkms|-open|-open-dkms)$'; then
