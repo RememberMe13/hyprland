@@ -1,0 +1,33 @@
+[config]
+fallback_color = "#ffffff"
+
+[templates.bash]
+input_path = '~/.config/matugen/templates/bash'
+output_path = '~/.bash_colors'
+
+[templates.fastfetch]
+input_path ='~/.config/matugen/templates/fastfetch'
+output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel'
+output_path = '~/.config/fuzzel/colors.ini'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/obsidian'
+output_path = '~/Documents/UNSW/Notes/.obsidian/snippets/matugen.css'
+
+[templates.mako]
+input_path = '~/.config/matugen/templates/mako'
+output_path = '~/.config/mako/colors'
+post_hook = 'makoctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill waybar && waybar &'

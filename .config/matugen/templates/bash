@@ -1,0 +1,1 @@
+PS1='[\[\e[38;2;{{ colors.primary.dark.red }};{{ colors.primary.dark.green }};{{ colors.primary.dark.blue }}m\]\u\[\e[0m\]@\[\e[38;2;{{ colors.primary.dark.red }};{{ colors.primary.dark.green }};{{ colors.primary.dark.blue }}m\]\h\[\e[38;2;{{ colors.primary.dark.red }};{{ colors.primary.dark.green }};{{ colors.primary.dark.blue }}m\] \w\[\e[0m\]]\$ '

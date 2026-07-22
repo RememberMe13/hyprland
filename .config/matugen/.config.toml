@@ -1,0 +1,31 @@
+[config]
+
+#[config.wallpaper]
+#set = true
+#command = '/usr/bin/awww img --transition-type grow --transition-fps 60 --transition-duration 2.8 {{ image }}'
+
+[templates.waybar]
+input_path = '/home/henry/.config/matugen/templates/colors.css'
+output_path = '/home/henry/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.btop]
+input_path = '/home/henry/.config/matugen/templates/btop.theme'
+output_path = '/home/henry/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.fuzzel]
+input_path = '/home/henry/.config/matugen/templates/fuzzel.ini'
+output_path = '/home/henry/.config/fuzzel/colors.ini'
+
+[templates.obsidian]
+input_path = '/home/henry/.config/matugen/templates/obsidian.css'
+output_path = '/home/henry/Documents/UNSW/Notes/UNSW Cyber notes/.obsidian/snippets/matugen.css'
+
+[templates.fastfetch]
+input_path = '/home/henry/.config/matugen/templates/fastfetch.jsonc'
+output_path = '/home/henry/.config/fastfetch/config.jsonc'
+
+[templates.bashrc]
+input_path = '/home/henry/.config/matugen/templates/bashrc.template'
+output_path = '/home/henry/.bash_colors'

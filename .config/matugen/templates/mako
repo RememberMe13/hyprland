@@ -1,0 +1,2 @@
+text-color={{colors.primary.default.hex}}
+border-color={{colors.primary_container.default.hex}}
