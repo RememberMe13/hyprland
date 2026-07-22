@@ -2,7 +2,7 @@
 username="$1"
 
 # Clone the repo
-echo "Cloning the EOS Community Sway repo..."
+echo "Cloning the repo..."
 git clone https://github.com/RememberMe13/hyprland.git
 
 # Check if nvidia-inst is installed
@@ -106,7 +106,7 @@ fi
 
 # Deploy system configs
 echo "Deploying system configs..."
-rsync -a --chown=root:root sway/etc/ /etc/
+rsync -a --chown=root:root hyprland/etc/ /etc/
 
 # Check if the script is running in a virtual machine
 if systemd-detect-virt | grep -vq "none"; then
@@ -116,7 +116,7 @@ if systemd-detect-virt | grep -vq "none"; then
 fi
 
 # Remove the repo
-echo "Removing the EOS Community Sway repo..."
+echo "Removing the repo..."
 #rm -rf sway
 
 # Enable the Greetd service
