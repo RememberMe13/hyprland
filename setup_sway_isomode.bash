@@ -113,7 +113,7 @@ fi
 
 # Remove the repo
 echo "Removing the repo..."
-#rm -rf sway
+rm -rf hyprland
 
 # Enable the Greetd service
 #echo "Enabling the Greetd service..."
