@@ -31,6 +31,9 @@ fi
 echo "Installing needed packages..."
 pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< ./hyprland/packages-repository.txt)
 
+echo "Installing aur packages..."
+yay -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< ./hyprland/packages-repository-AUR.txt)
+
 # Deploy user configs
 echo "Deploying user configs..."
 rsync -a hyprland/.config "/home/${username}/"
@@ -110,6 +113,11 @@ if systemd-detect-virt | grep -vq "none"; then
   # Uncomment WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config
   sed -i '/^#WLR_RENDERER_ALLOW_SOFTWARE/s/^#//' /etc/greetd/regreet.toml
 fi
+
+# Enable autologin for user
+# sed replace INSERTUSERHERE with $(username)
+sed -i "s/INSERTUSERHERE/$(username)/" getty@tty1.service
+sudo systemctl daemon-reload && sudo systemctl enable getty@tty1.service
 
 # Remove the repo
 echo "Removing the repo..."
