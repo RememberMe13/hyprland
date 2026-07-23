@@ -23,7 +23,6 @@ alias umlet='_JAVA_AWT_WM_NONREPARENTING=1 _JAVA_OPTIONS="-Dawt.useSystemAAFontS
 alias gs='git status'
 alias ga='git add -A'
 alias gc='git commit'
-alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
 
 
