@@ -9,7 +9,7 @@ git clone https://github.com/RememberMe13/hyprland.git
 # If it is, do the Nvidia stuff
 if pacman -Qq | grep -Eq '^nvidia(|-dkms|-open|-open-dkms)$'; then
     echo "Adding the --unsupported-gpu flag to the sway call in greetd.conf..."
-    sed -i 's|sway -c|sway --unsupported-gpu -c|' sway/etc/greetd/greetd.conf
+    sed -i 's|sway -c|sway --unsupported-gpu -c|' hyprland/etc/greetd/greetd.conf
     echo "Adding a custom desktop file for Nvidia sessions..."
     mkdir -p /usr/share/wayland-sessions
     cat <<EOF > /usr/share/wayland-sessions/sway-nvidia.desktop
@@ -38,6 +38,10 @@ yay -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< ./hyp
 echo "Deploying user configs..."
 rsync -a hyprland/.config "/home/${username}/"
 rsync -a hyprland/home_config/ "/home/${username}/"
+
+# Enable autologin for user
+sed -i "s/INSERTUSERHERE/${username}/" hyprland/etc/systemd/system/getty@tty1.service
+sudo systemctl daemon-reload && sudo systemctl enable getty@tty1.service
 
 # Add "NoDisplay" property to desktop files we don't want in the launcher
 echo "Adding custom local desktop files..."
@@ -95,7 +99,7 @@ if getent group autologin | grep -qw "${username}"; then
 
     sway_command="start-hyprland"
 
-    cat <<EOF >> sway/etc/greetd/greetd.conf
+    cat <<EOF >> hyprland/etc/greetd/greetd.conf
 
 [initial_session]
 command = "${sway_command}"
@@ -113,11 +117,6 @@ if systemd-detect-virt | grep -vq "none"; then
   # Uncomment WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config
   sed -i '/^#WLR_RENDERER_ALLOW_SOFTWARE/s/^#//' /etc/greetd/regreet.toml
 fi
-
-# Enable autologin for user
-# sed replace INSERTUSERHERE with $(username)
-sed -i "s/INSERTUSERHERE/$(username)/" getty@tty1.service
-sudo systemctl daemon-reload && sudo systemctl enable getty@tty1.service
 
 # Remove the repo
 echo "Removing the repo..."
