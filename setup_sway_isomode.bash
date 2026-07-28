@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#TODO Check if pacman -Runs xterm works
+
 username="$1"
 
 # Clone the repo

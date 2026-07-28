@@ -1,0 +1,34 @@
+Autostart:
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+Input:
+maybe set sticky click?
+
+Keybindings:
++q close
++d fuzzel
++v clipboard
++c open terminal with qalc open, should be floating and small
++enter open footclient
++o librewolf
++f files
++shift+e power menu
++F1 lock screen
++f fullscreen
+print (grim -g "$(slurp)" - | swappy -f -)
++print :
+    #!/bin/bash
+    cd ~
+    grim -g "$(slurp)" tesseract.png
+    tesseract tesseract.png - | wl-copy
+    notify-send "Copied:" "$(wl-paste)"
+    rm tesseract.png
+
+Looknfeel:
+
+Output:
+
+Windowrules:
+for_window [title="qalc"] floating enable, move position 1373 px -78 px, resize set width 20 ppt height 30 ppt
+for_window [app_id="librewolf"] inhibit_idle fullscreen
