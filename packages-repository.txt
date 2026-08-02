@@ -1,3 +1,4 @@
+tree
 acpi
 arc-gtk-theme-eos
 autotiling
