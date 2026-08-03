@@ -9,11 +9,18 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("footclient"))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nemo"))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("fuzzel"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("thunar"))
+hl.bind(mainMod .. " + space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("fuzzel"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl pause; hyprlock"))
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | fuzzel -d -w 90 -l 30 -p \"Select an entry to copy it to your clipboard buffer:\"| cliphist decode | wl-copy")) --clipboard
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("librewolf"))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ fullscreen, toggle }))
+hl.bind("print", hl.dsp.exec_cmd("(grim -g \"$(slurp)\" - | swappy -f -)"))
+hl.bind(mainMod .. " + print", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenArea.sh"))
+hl.bind(mainMod .. " + SHIFT + print", hl.dsp.exec_cmd("~/.config/hypr/scripts/tesseract.sh"))
+
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -34,8 +41,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

@@ -1,3 +1,5 @@
+tesseract
+tesseract-data-eng
 nmap
 tree
 acpi
