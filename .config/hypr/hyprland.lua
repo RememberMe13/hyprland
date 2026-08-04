@@ -14,6 +14,7 @@ require("config/input")
 require("config/keybindings")
 require("config/looknfeel")
 require("config/output")
+require("config/windowrules")
 
 
 

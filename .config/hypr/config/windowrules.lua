@@ -47,3 +47,12 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    name = "float-qalc",
+    match = { title = "qalc"},
+
+    float = true,
+    move = {1470, 60},
+    size = {430, 260}
+})

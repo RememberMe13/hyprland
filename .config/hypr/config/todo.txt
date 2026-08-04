@@ -4,7 +4,6 @@ Input:
 maybe set sticky click?
 
 Keybindings:
-+c open terminal with qalc open, should be floating and small
 +shift+e power menu
 
 Looknfeel:
@@ -12,5 +11,4 @@ Looknfeel:
 Output:
 
 Windowrules:
-for_window [title="qalc"] floating enable, move position 1373 px -78 px, resize set width 20 ppt height 30 ppt
 for_window [app_id="librewolf"] inhibit_idle fullscreen
