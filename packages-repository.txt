@@ -1,4 +1,4 @@
-7z
+7zip
 tesseract
 tesseract-data-eng
 nmap
