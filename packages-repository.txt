@@ -1,3 +1,4 @@
+7z
 tesseract
 tesseract-data-eng
 nmap
