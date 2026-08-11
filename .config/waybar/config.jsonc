@@ -4,7 +4,7 @@
     "height": 27,
     "spacing": 0,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["custom/clock", "privacy"],
+    "modules-center": ["custom/clock"],
     "modules-right": ["idle_inhibitor", "cpu", "memory", "backlight", "wireplumber", "battery", "tray", "custom/wallpaper", "custom/power"],
 
     "hyprland/workspaces": {
@@ -24,34 +24,6 @@
     		"interval": 10,
     		"format": "<span color='#cec2db'> {}</span>"
 	},
-
-    "privacy": {
-    	"icon-spacing": 4,
-    	"icon-size": 15,
-    	"transition-duration": 250,
-    	"modules": [
-    		{
-    			"type": "screenshare",
-    			"tooltip": true,
-    			"tooltip-icon-size": 24
-    		},
-    		{
-    			"type": "audio-out",
-    			"tooltip": true,
-    			"tooltip-icon-size": 24
-    		},
-    		{
-    			"type": "audio-in",
-    			"tooltip": true,
-    			"tooltip-icon-size": 24
-    		},
-    		{
-    			"type": "location",
-    			"icon-name": "location-services-active-symbolic"
-    		}
-    	],
-    	"ignore-monitor": true
-    },
 
     "wireplumber": {
         "format": "<span color='#49454e'>| </span><span color='#cec2db'>volume</span> <span color='#958e99'>{volume}%</span>",
