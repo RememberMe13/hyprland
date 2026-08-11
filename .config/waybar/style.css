@@ -1,123 +1,98 @@
+@import "colors.css";
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Maple Mono NF, monospace;
-    font-weight: normal;
     font-size: 14px;
     min-height: 0;
+    font-family: "Maple Mono NF";
 }
 
+/* ===== BAR ===== */
 window#waybar {
-    background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    background-color: alpha(@surface, 0.875);
+    color: @on_surface;
+}
+
+/* ===== MODULE SPACING ===== */
+#clock,
+#pulseaudio,
+#battery,
+#temperature,
+#backlight,
+#cpu,
+#memory,
+#custom-power-mode,
+#mpd {
+    padding: 0 7px;
+}
+
+/* ===== WORKSPACES ===== */
+#workspaces {
+    padding: 0 10px;
 }
 
 #workspaces button {
-    padding: 5px;
-    color: #555869;
-    margin-right: 5px;
+    all: unset;
+    padding: 0 14px;
+    color: alpha(@on_surface_variant, 0.60);
 }
 
 #workspaces button.active {
-    color: #a6adc8;
-}
-
-#workspaces button.focused {
-    color: #a6adc8;
-    background: #eba0ac;
-    border-radius: 10px;
-}
-
-#workspaces button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
-    border-radius: 10px;
+    color: @primary;
+    font-weight: 600;
 }
 
 #workspaces button:hover {
-    background: #cdd6f4;
-    color: #11111b; 
-    border-radius: 10px;
+    color: @on_surface;
 }
 
-#window,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#workspaces,
-#tray,
-#backlight {
-    background: #1e1e2e;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 5px;
-    /* border: 1px solid #181825; */
+/* ===== MUSIC ===== */
+#mpd {
+    color: @tertiary;
 }
 
-#backlight {
-    border-radius: 10px 0px 0px 10px;
+/* ===== CLOCK ===== */
+#custom-clock {
+    color: @secondary;
+    padding: 0 5px;
 }
 
+/* ===== TRAY ===== */
 #tray {
-    border-radius: 10px;
-    margin-right: 10px;
+    padding: 0 6px;
 }
 
-#workspaces {
-    background: #1e1e2e;
-    border-radius: 10px;
-    margin-left: 10px;
-    padding-right: 0px;
-    padding-left: 5px;
+/* ===== LYRICS ===== */
+#custom-lyrics {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans CJK JP", sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    padding: 0 10px;
+
+    color: alpha(@on_surface, 0.78);
 }
 
-#memory {
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+#custom-lyrics.has-lyrics:hover {
+    opacity: 0.8;
 }
 
-#cpu {
-    border-radius: 10px 0px 0px 10px;
+#custom-lyrics.no-lyrics,
+#custom-lyrics.lyrics-hidden {
+    color: @outline;
+    font-size: 13px;
+    padding: 0 10px;
 }
 
-#window {
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
+#custom-clock.clock-hidden {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
 }
 
-#clock {
-    color: #a6adc8;
-    border-radius: 10px 10px 10px 10px;
-    margin-left: 5px;
-    border-right: 0px;
+#battery.charging {
+    color: @primary;
 }
 
-#network {
-    color:  #a6adc8;
-    border-radius: 10px 0px 0px 10px;
-
-}
-
-#pulseaudio {
-    color: #a6adc8;
-    border-left: 0px;
-    border-right: 0px;
-}
-
-#pulseaudio.microphone {
-    color: #a6adc8;
-    border-radius: 0px 10px 10px 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-right: 5px;
-}
-
-#battery {
-    color:#a6adc8;
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+#battery.critical {
+    color: @error;
 }
