@@ -1,3 +1,2 @@
-librewolf-bin
 csakura
 eclipse-java-bin

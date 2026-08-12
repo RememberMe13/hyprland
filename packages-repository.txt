@@ -1,3 +1,4 @@
+librewolf
 ruff
 7zip
 tesseract
