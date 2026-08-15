@@ -13,7 +13,7 @@ require("config/autostart")
 require("config/input")
 require("config/keybindings")
 require("config/looknfeel")
-require("config/output")
+require("config/monitors")
 require("config/windowrules")
 
 
