@@ -21,6 +21,7 @@ hl.bind("print", hl.dsp.exec_cmd("(grim -g \"$(slurp)\" - | swappy -f -)"))
 hl.bind(mainMod .. " + print", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenArea.sh"))
 hl.bind(mainMod .. " + SHIFT + print", hl.dsp.exec_cmd("~/.config/hypr/scripts/tesseract.sh"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("footclient -T qalc -e qalc"))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("~/.config/waybar/scripts/power_menu.sh"))
 
 
 -- Move focus with mainMod + arrow keys
