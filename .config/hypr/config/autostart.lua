@@ -14,6 +14,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("hypridle")
+  hl.exec_cmd("~/.config/waybar/scripts/wallpaper.sh")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 end)
 
