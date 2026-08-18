@@ -96,3 +96,13 @@ window#waybar {
 #battery.critical {
     color: @error;
 }
+
+#custom-wallpaper {
+    padding: 0 4px;
+    color: @primary;
+}
+
+#custom-power {
+    padding: 0 10px 0 4px;
+    color: @primary;
+}

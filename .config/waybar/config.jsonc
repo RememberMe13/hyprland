@@ -21,7 +21,7 @@
 
     "custom/clock": {
     		"exec": "date +'%I:%M %p %A, %b %d' | awk '{print tolower($0)}'",
-    		"interval": 10,
+    		"interval": 30,
     		"format": "<span color='#cec2db'> {}</span>"
 	},
 
@@ -58,7 +58,7 @@
         "critical": 15
     	},
     	"tooltip": false,
-    	"interval": 20
+    	"interval": 30
 
     },
 
