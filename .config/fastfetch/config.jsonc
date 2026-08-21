@@ -2,16 +2,16 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "display": {
       "color": {
-          "keys": "#83d3e3",
-          "title": "#83d3e3"
+          "keys": "#85d2e7",
+          "title": "#85d2e7"
       }
   },
   "logo": {
     "type": "auto",        // Logo type: auto, builtin, small, file, etc.
     "source": "arch",      // Built-in logo name or file path
     "color": {
-        "1": "#83d3e3",
-        "2": "#83d3e3"
+        "1": "#85d2e7",
+        "2": "#85d2e7"
     }
   },
   "modules": [

@@ -14,7 +14,6 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("hypridle")
-  hl.exec_cmd("sleep 4 && ~/.config/waybar/scripts/wallpaper.sh")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
+  hl.exec_cmd("sleep 2 && ~/.config/waybar/scripts/wallpaper.sh && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0")
 end)
 

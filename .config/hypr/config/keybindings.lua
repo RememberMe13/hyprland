@@ -32,7 +32,7 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 
 -- GESTURES
---hl.gesture({ fingers = 2, direction = "pinch", action = "cursorZoom", zoom_level = 1, mode = "live" })
+hl.gesture({ fingers = 4, direction = "swipe", action = "resize"})
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
