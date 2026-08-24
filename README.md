@@ -13,20 +13,7 @@
 ```
 https://raw.githubusercontent.com/RememberMe13/hyprland/main/setup_sway_isomode.bash
 ```
+
+# Screenshots
 ![welcome_install-customization-file](./screenshot2.png)
 ![welcome_install-customization-file](./screenshot.png)
-
-3. Click <kbd> OK </kbd>, then back in the Welcome app click <kbd> Start the Installer </kbd> and proceed with an online installation. Be sure to choose "no desktop" on the DE selection screen.
-
-![installer-no_desktop](https://github.com/user-attachments/assets/f9146bf2-e0ab-4e0a-9b6a-89ad5eed5a29)
-
-
-### Manually (Post-Installation) (NOT SETUP YET DO NOT USE)
-
-Alternatively, you can add Sway after the installation is complete by cloning the repo and running the `sway-install.sh` script.
-
-    git clone https://github.com/EndeavourOS-Community-Editions/sway.git
-
-    cd sway
-
-    sudo ./sway-install.sh
