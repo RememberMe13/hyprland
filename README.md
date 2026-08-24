@@ -13,6 +13,7 @@
 ```
 https://raw.githubusercontent.com/RememberMe13/hyprland/main/setup_sway_isomode.bash
 ```
+![welcome_install-customization-file](./screenshot2.png)
 ![welcome_install-customization-file](./screenshot.png)
 
 3. Click <kbd> OK </kbd>, then back in the Welcome app click <kbd> Start the Installer </kbd> and proceed with an online installation. Be sure to choose "no desktop" on the DE selection screen.
