@@ -50,9 +50,17 @@ hl.window_rule({
 
 hl.window_rule({
     name = "float-qalc",
-    match = { title = "qalc"},
+    match = { title = "qalc" },
 
     float = true,
     move = {1470, 60},
     size = {430, 260}
+})
+
+hl.window_rule({
+    name = "float-pip",
+    match = { title = "Picture-in-Picture" },
+
+    float = true,
+    pin = true
 })
