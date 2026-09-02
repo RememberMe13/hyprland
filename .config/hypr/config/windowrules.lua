@@ -64,3 +64,10 @@ hl.window_rule({
     float = true,
     pin = true
 })
+
+hl.window_rule({
+    name = "float-file-progress",
+    match = { title = "File Operation Progress" },
+
+    float = true
+})
