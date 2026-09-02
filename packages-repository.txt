@@ -1,3 +1,4 @@
+perl-image-exiftool
 librewolf
 ruff
 7zip
